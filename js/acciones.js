@@ -30,7 +30,7 @@ $(document).ready(function(e) {
 	}
 	//Correcto:Toma una captura de la aceleracion
 	function Correcto(acceleration){
-		var element=document.getElementById('ecelerometro');
+		var element=document.getElementById('acelerometro');
 		
 		element.innerHTML='Aceleracion en X:'+acceleration.x+'<br/>'+
 		'Aceleracion en Y:'+acceleration.y+'<br/>'+
@@ -48,5 +48,10 @@ $(document).ready(function(e) {
 		'Longitud:'+posicion.coords.longitude +'<br/>'+
 		'Precision:'+posicion.coords.accuracy +'<br/>'+
 		'Intervalo:'+posicion.timestamp +'<br/>';
+	}
+	//Error en la geolocalizacion
+	function ErrorLocalizacion(error){
+		alert('codigo:' +error.code +'\n'+
+		'mensaje:'+error.message+'\n');
 	}
 });//document ready
